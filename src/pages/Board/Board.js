@@ -1,7 +1,8 @@
 import Lane from '../../components/Lane/Lane';
 import './Board.css';
 import React from 'react'
-import { useState,useEffect } from 'react';
+ 
+import useDataFetching from '../../hooks/useDataFetching';
 
 const lanes = [
   { id: 1, title: 'To Do' },
@@ -11,31 +12,10 @@ const lanes = [
 ];
 
 function Board() {
-  const [loading,setLoading]= useState(false);
-  const [tasks,setTasks]=useState([]);
-  const [error,setError]=useState('');
   
-  useEffect(()=>{
-    async function fectchData(){
-      try{
-        const tasks=await fetch(`https://my-json-server.typicode.com/ZEAB-H/TaskDb/tasks`,
-        );
-        const result= await tasks.json();
-        
-        if (result){
-          setTasks(result);
-          setLoading(false);
-        }
-      }
-       catch(e){
-        setLoading(false);
-        setError(e.message);
-       }
-      }
-
-    
-    fectchData();
-  },[]);
+   
+  const [loading, error, tasks] =
+              useDataFetching(`https://my-json-server.typicode.com/ZEAB-H/TaskDb/tasks`);
 
   return (
     <div className='Board-wrapper'>
