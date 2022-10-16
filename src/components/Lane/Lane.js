@@ -1,7 +1,7 @@
 import './Lane.css';
 import React from 'react';
 import Task from '../Task/Task';
-function Lane({ title,loading,error,tasks }) {
+function Lane({ title,loading,error,tasks ,onDragStart}) {
   return (
     <div className='Lane-wrapper'>
       <h2>{title}</h2>
@@ -14,7 +14,8 @@ function Lane({ title,loading,error,tasks }) {
               key={task.id}
               id={task.id}
               title={task.title}
-              body={task.body}/>
+              body={task.body}
+              onDragStart={onDragStart}/>
           ))
         )
       }

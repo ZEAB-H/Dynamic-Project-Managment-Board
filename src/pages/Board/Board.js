@@ -11,6 +11,11 @@ const lanes = [
   { id: 4, title: 'Done' },
 ];
 
+
+function onDragStart(e,id){
+  e.dataTransfer.setData('id',id);
+}
+
 function Board() {
   
    
@@ -25,7 +30,10 @@ function Board() {
         loading={loading}
         error={error}
         tasks={tasks.filter((task)=>
-            task.lane ===lane.id)}/>
+            task.lane ===lane.id)}
+            onDragStart={onDragStart}
+            />
+         
       ))}
     </div>
   );
