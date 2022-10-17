@@ -22,13 +22,13 @@ background: beige;`;
 function App() {
   return (
     <>
-    <GlobalStyle>
+    <GlobalStyle/>
     <APP className='App'>
       <Header />
       <Board />
       <Backlog/>
     </APP>
-    </GlobalStyle>
+     
     </>
   );
 }
