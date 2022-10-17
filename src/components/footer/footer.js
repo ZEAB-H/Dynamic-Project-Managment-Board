@@ -9,13 +9,13 @@ const FooterWrapper=styled.div`
  a{
     color:brown;
     text-decoration:none;
-    target="_blank";
+   
 
  }
 `
 function Footer(){
     return(<FooterWrapper>
-        <span>made with &hearts; by <a href="https://dev-abel.netlify.app/">Abel Hailemichael</a></span>
+        <span>made with &hearts; by <a  target="_blank" rel="noreferrer" href="https://dev-abel.netlify.app/">Abel Hailemichael</a></span>
     </FooterWrapper>)
 }
 
