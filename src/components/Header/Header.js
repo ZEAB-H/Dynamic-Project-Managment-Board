@@ -22,7 +22,7 @@ background-color: rgb(68, 124, 236);
 function Header() {
   return (
     <HeaderWrapper  >
-      <h1>Project Management Board</h1>
+      <h1>PMP:project management board</h1>
     </HeaderWrapper>
   )
 }

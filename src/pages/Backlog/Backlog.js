@@ -41,17 +41,13 @@ function Backlog(){
     return (<BacklogWrapper  >
         <h2>Backlog</h2>
         <TaskWrapper >
-            {loading || error ?(
-                <span>{error||'Loading...'}</span>
-            ): (
-                tasks.map((task)=> (
-                    <Task 
-                    key={task.id}
-                    title={task.title}
-                    body={task.body}
-                />
-                ))
-            )}
+        {loading || error ? (
+          <span>{error || 'Loading...'}</span>
+        ) : (
+          tasks.map((task) => (
+            <Task key={task.id} title={task.title} body={task.body} />
+          ))
+        )}
         </TaskWrapper>
     </BacklogWrapper>);
 

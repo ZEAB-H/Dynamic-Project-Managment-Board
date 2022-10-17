@@ -17,14 +17,15 @@ const TaskWrapper= styled.div`
     }
 `;
 
-function Task({id,onDragStart,title,body}){
+function Task({id, title, body, onDragStart }){
     return(
-        <TaskWrapper 
-        draggable
-        onDragStart={(e)=> onDragStart(e,id)}>
-            <h3>{title}</h3>
-            <p>{body}</p>
-        </TaskWrapper>
+        <TaskWrapper
+      draggable
+      onDragStart={(e) => onDragStart(e, id)}
+    >
+      <h2>{title}</h2>
+      <p>{body}</p>
+    </TaskWrapper>
     );
 }
 

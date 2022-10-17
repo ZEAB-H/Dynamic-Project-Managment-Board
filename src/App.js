@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Board from './pages/Board/Board';
 import Header from './components/Header/Header';
-import Backlog from './pages/Backlog/Backlog';
+// import Backlog from './pages/Backlog/Backlog';
 import { createGlobalStyle } from 'styled-components';
+import Footer from './components/footer/footer';
 
 const GlobalStyle=createGlobalStyle`
 margin: 0;
@@ -26,7 +27,9 @@ function App() {
     <APP className='App'>
       <Header />
       <Board />
-      <Backlog/>
+      {/* <Backlog/> */}
+      <Footer/>
+      
     </APP>
      
     </>

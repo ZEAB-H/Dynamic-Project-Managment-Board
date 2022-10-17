@@ -32,8 +32,18 @@ text-align: left;
 
 
    
-function Lane({ title,laneId,onDrop,loading,error,tasks ,onDragStart, onDragOver}) {
-  return (
+function Lane({
+  laneId,
+  title,
+  loading,
+  error,
+  tasks,
+  onDragStart,
+  onDragOver,
+  onDrop,
+}) {
+  
+      return (
     <LaneWrapper 
     onDragOver={onDragOver}
     onDrop={(e) => onDrop(e, laneId)}>
@@ -44,13 +54,11 @@ function Lane({ title,laneId,onDrop,loading,error,tasks ,onDragStart, onDragOver
         ) :(
           tasks.map((task) =>(
             <Task
-              key={task.id}
-              id={task.id}
-              title={task.title}
-              laneId={task.laneId}
-              body={task.body}
-              onDragStart={onDragStart}
-              onDrop={onDrop}
+            key={task.key}
+            id={task.id}
+            title={task.title}
+            body={task.body}
+            onDragStart={onDragStart}
              />
           ))
         )
