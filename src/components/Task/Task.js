@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TaskWrapper= styled.div`
-    background:lightblue;
+    background:white;
     padding:20px;
     border-radius:20px;
     margin:0% 5% 5% 5%;
