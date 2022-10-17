@@ -8,7 +8,9 @@ const BacklogWrapper=styled.div`
 display: flex;
     flex-direction: column;
     margin: 5%;
-    justify-content:center;
+    height: 100%;
+  align-items: center;
+  justify-content: center;
     
     h2{
         width: 100%;
@@ -23,6 +25,9 @@ const TaskWrapper=styled.div`
 display: flex;
 justify-content: space-between;
 flex-direction: row;
+height: 100%;
+align-items: center;
+justify-content: center;
 
 flex-wrap: wrap;
 margin: 5%;`;
